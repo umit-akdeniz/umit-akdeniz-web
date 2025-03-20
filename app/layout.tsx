@@ -2,11 +2,15 @@ import { Inter } from 'next/font/google';
 import '../src/app/globals.css';
 import Header from '../components/Header';
 
+
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '700'] });
 
 export const metadata = {
-  title: 'My Personal Website',
-  description: 'A modern personal site with a single menu.',
+  title: 'Ümit Akdeniz',
+  description: 'Personal website of Ümit Akdeniz.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

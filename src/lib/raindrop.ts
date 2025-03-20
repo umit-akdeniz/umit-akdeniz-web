@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Configure the Raindrop API client
-const raindropClient = axios.create({
+export const raindropClient = axios.create({
   baseURL: 'https://api.raindrop.io/rest/v1',
   headers: {
     Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
