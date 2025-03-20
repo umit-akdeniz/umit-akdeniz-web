@@ -36,7 +36,7 @@ export default function Essays() {
             Time moves forward, but our minds wander back. This is a short reflection on moments that shaped me—some loud, some quiet, all significant.
           </p>
           <iframe
-            className="w-full h-32 sm:h-48 md:h-64 rounded-md"
+            className="w-full h-full sm:h-48 md:h-64 rounded-md"
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
             title="Reflection Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
