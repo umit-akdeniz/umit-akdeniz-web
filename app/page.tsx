@@ -32,7 +32,7 @@ export default function Home() {
               height={150}
               className="w-full h-16 sm:h-20 md:h-24 object-cover rounded-md mb-2 sm:mb-4"
             />
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I’m Ümit Akdeniz, a [your profession/hobby].</p>
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">Im Ümit Akdeniz, a [your profession/hobby].</p>
           </CardContent>
         </Card>
 
