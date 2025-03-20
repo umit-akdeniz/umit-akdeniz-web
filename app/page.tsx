@@ -38,12 +38,12 @@ export default function Home() {
 
         <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
-            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Featured Essay</CardTitle>
+            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Featured ss Essay</CardTitle>
             <CardDescription className="text-xs sm:text-sm text-gray-600">Read my latest thoughts.</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
             <p className="text-gray-700 text-xs sm:text-sm md:text-base">
-              A sample essay. <a href="/essays/sample" className="text-blue-600 hover:underline">Read more</a>
+              A sample essay. <a href="/essays/sample" className="text-blue-600 hover:underline">Read more more</a>
             </p>
           </CardContent>
         </Card>
