@@ -53,7 +53,7 @@ export default function Header() {
       <nav className="hidden md:block w-64 bg-white border-r border-gray-200 fixed top-0 left-0 h-full z-40 flex items-center justify-center">
         <div className="p-4 w-full max-w-xs">
           <h2 className="text-lg font-semibold text-gray-800 mb-2 text-center">Ümit Akdeniz</h2>
-          <p className="text-sm text-gray-600 mb-6 text-center">A curious mind exploring life. that's it.</p>
+          <p className="text-sm text-gray-600 mb-6 text-center">A curious mind exploring life. thats it.</p>
           <ul className="space-y-4">
             {navItems.map((item) => (
               <li key={item.href}>
