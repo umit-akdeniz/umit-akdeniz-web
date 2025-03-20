@@ -48,21 +48,6 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        <Card className="bg-white border-gray-200 shadow-md">
-          <CardHeader className="p-2 sm:p-3 md:p-4">
-            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Latest Project</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">A presentation overview.</CardDescription>
-          </CardHeader>
-          <CardContent className="p-2 sm:p-3 md:p-4">
-            <iframe
-              className="w-full h-16 sm:h-20 md:h-24 rounded-md mb-2 sm:mb-4"
-              src="https://docs.google.com/presentation/d/e/2PACX-1vQe8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8/pub?start=false&loop=false&delayms=3000"
-              title="Project Presentation"
-              allowFullScreen
-            />
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">Check out my latest work.</p>
-          </CardContent>
-        </Card>
       </div>
     </div>
   );
