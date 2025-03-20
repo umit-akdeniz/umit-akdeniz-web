@@ -10,9 +10,11 @@ export default function Header() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/cv', label: 'CV' },
+    { href: '/journey', label: 'Journey' },
+    { href: '/posts', label: 'Posts' },
     { href: '/essays', label: 'Essays' },
     { href: '/links', label: 'Links' },
+    
   ];
 
   return (
