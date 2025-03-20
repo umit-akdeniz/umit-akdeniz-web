@@ -1,10 +1,10 @@
 import { createClient, ContentfulClientApi } from 'contentful';
-import { Document } from '@contentful/rich-text-types';
+
 
 // Blog yazısı için tip tanımı
 interface BlogPostFields {
   title: string;
-  content: Document; // Rich Text için Contentful’un Document tipi
+  longtext: string; // Rich Text için Contentful’un Document tipi
   date: string;
 }
 
