@@ -39,7 +39,7 @@ export default function Home() {
         <Card className="bg-white border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
           <CardHeader className="p-2 sm:p-3 md:p-4">
             <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Featured Essay</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">Read my latest thoughts.</CardDescription>
+            <CardDescription className="text-xs sm:text-sm text-gray-600">Read mine latest thoughts.</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
             <p className="text-gray-700 text-xs sm:text-sm md:text-base">
