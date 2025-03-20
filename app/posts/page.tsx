@@ -8,7 +8,7 @@ export default async function Home() {
     return (
       <div className="p-4">
         <h1 className="text-2xl font-bold mb-4">Blog Yazılarım</h1>
-        <p className="text-red-600">Blog yazıları yüklenirken bir hata oluştu.</p>
+        <p className="text-red-600">Blog yazıAları yüklenirken bir hata oluştu.</p>
       </div>
     );
   }
