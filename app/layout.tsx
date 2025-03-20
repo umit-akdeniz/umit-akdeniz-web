@@ -20,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased flex flex-col min-h-screen overflow-hidden`}>
+      <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased flex flex-col min-h-screen`}>
         <Header />
-        <main className="flex-1 p-2 sm:p-4 md:p-6 md:pl-64 overflow-hidden">
-          <div className="max-w-full sm:max-w-5xl mx-auto h-full">{children}</div>
+        <main className="flex-1 p-2 sm:p-4 md:p-6 md:pl-64 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+          <div className="max-w-full sm:max-w-5xl mx-auto">{children}</div>
         </main>
       </body>
     </html>
