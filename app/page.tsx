@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 
 export default function Home() {
   return (
-    <div className="p-2 sm:p-4 md:p-6">
+    <div className="p-2 sm:p-4 md:p-6 h-full overflow-hidden">
       {/* Banner */}
       <div className="w-full h-32 sm:h-48 md:h-64 bg-gray-200 mb-4 sm:mb-6 md:mb-8 flex items-center justify-center rounded-lg overflow-hidden relative">
         <Image
@@ -19,7 +19,7 @@ export default function Home() {
 
       {/* Kartlar */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6">
-        <Card className="bg-white border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
+        <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
             <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Hello!</CardTitle>
             <CardDescription className="text-xs sm:text-sm text-gray-600">A little about me.</CardDescription>
@@ -30,16 +30,16 @@ export default function Home() {
               alt="Profile"
               width={250}
               height={150}
-              className="w-full h-16 sm:h-24 md:h-32 object-cover rounded-md mb-2 sm:mb-4"
+              className="w-full h-16 sm:h-20 md:h-24 object-cover rounded-md mb-2 sm:mb-4"
             />
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">Im Ümit Akdieniz, a [your profession/hobby].</p>
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I’m Ümit Akdeniz, a [your profession/hobby].</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-white border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
+        <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
             <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Featured Essay</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">Read mine latest thoughts.</CardDescription>
+            <CardDescription className="text-xs sm:text-sm text-gray-600">Read my latest thoughts.</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
             <p className="text-gray-700 text-xs sm:text-sm md:text-base">
@@ -48,14 +48,14 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        <Card className="bg-white border-gray-200 shadow-md hover:shadow-xl transition-all duration-300">
+        <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
             <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Latest Project</CardTitle>
             <CardDescription className="text-xs sm:text-sm text-gray-600">A presentation overview.</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
             <iframe
-              className="w-full h-16 sm:h-24 md:h-32 rounded-md mb-2 sm:mb-4"
+              className="w-full h-16 sm:h-20 md:h-24 rounded-md mb-2 sm:mb-4"
               src="https://docs.google.com/presentation/d/e/2PACX-1vQe8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8/pub?start=false&loop=false&delayms=3000"
               title="Project Presentation"
               allowFullScreen
