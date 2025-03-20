@@ -6,6 +6,7 @@ interface BlogPostFields {
   title: string;
   longtext: string; // Rich Text için Contentful’un Document tipi
   date: string;
+  contentTypeId: string; // Required by EntrySkeletonType
 }
 
 export const contentfulClient: ContentfulClientApi<undefined> = createClient({
@@ -15,7 +16,7 @@ export const contentfulClient: ContentfulClientApi<undefined> = createClient({
 
 export async function getBlogPosts(): Promise<BlogPostFields[]> {
   try {
-    const response = await contentfulClient.getEntries<BlogPostFields>({
+    const response = await contentfulClient.getEntries<{ fields: BlogPostFields; contentTypeId: string }>({
       content_type: 'blogPost', // Content type adını kontrol et
     });
     return response.items.map((item) => item.fields) || [];
