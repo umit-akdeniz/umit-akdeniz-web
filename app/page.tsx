@@ -7,7 +7,7 @@ export default function Home() {
       {/* Banner */}
       <div className="w-full h-32 sm:h-48 md:h-64 bg-gray-200 mb-4 sm:mb-6 md:mb-8 flex items-center justify-center rounded-lg overflow-hidden relative">
         <Image
-          src="https://via.placeholder.com/1200x300"
+          src="/banner.png"
           alt="Banner"
           width={1200}
           height={300}
@@ -25,42 +25,19 @@ export default function Home() {
             <CardDescription className="text-xs sm:text-sm text-gray-600">A little about me.</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
-            <Image
-              src="https://via.placeholder.com/250x150"
-              alt="Profile"
-              width={250}
-              height={150}
-              className="w-full h-16 sm:h-20 md:h-24 object-cover rounded-md mb-2 sm:mb-4"
-            />
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I’m Ümit Akdeniz, a [your profession/hobby].</p>
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I’m Ümit Akdeniz. I'm a passionate coder and physics enthusiast, blending the worlds of software and science to explore new ideas and solve problems.</p>
           </CardContent>
         </Card>
 
         <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
-            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Featured Essay</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">Read my latest thoughts.</CardDescription>
+            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800"></CardTitle>
+            <CardDescription className="text-xs sm:text-sm text-gray-600"></CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
             <p className="text-gray-700 text-xs sm:text-sm md:text-base">
-              A sample essay. <a href="/essays/sample" className="text-blue-600 hover:underline">Read more</a>
+            <a href="/cv" className="text-blue-600 hover:underline">Curriculum Vitae</a>
             </p>
-          </CardContent>
-        </Card>
-
-        <Card className="bg-white border-gray-200 shadow-md">
-          <CardHeader className="p-2 sm:p-3 md:p-4">
-            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Latest Project</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">A presentation overview.</CardDescription>
-          </CardHeader>
-          <CardContent className="p-2 sm:p-3 md:p-4">
-            <iframe
-              className="w-full h-16 sm:h-20 md:h-24 rounded-md mb-2 sm:mb-4"
-              src="https://docs.google.com/presentation/d/e/2PACX-1vQe8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8/pub?start=false&loop=false&delayms=3000"
-              title="Project Presentation"
-              allowFullScreen
-            />
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">Check out my latest work.</p>
           </CardContent>
         </Card>
       </div>
