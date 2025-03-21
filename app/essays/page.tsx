@@ -17,7 +17,7 @@ export default function Essays() {
             Simplicity is not just about removing clutter—it’s about finding clarity. In a world overflowing with noise, I’ve learned that less can indeed be more.
           </p>
           <Image
-            src="https://via.placeholder.com/300x200"
+            src="/1984.jpg"
             alt="Simplicity Illustration"
             width={300}
             height={200}

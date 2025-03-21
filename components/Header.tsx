@@ -12,6 +12,7 @@ export default function Header() {
     { href: '/', label: 'Home' },
     { href: '/journey', label: 'Journey' },
     { href: '/essays', label: 'Essays' },
+    { href: '/books', label: 'Books' },
     { href: '/links', label: 'Links' },
     
   ];
