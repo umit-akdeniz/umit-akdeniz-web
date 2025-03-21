@@ -21,11 +21,11 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6">
         <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
-            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Hello!</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">A little about me.</CardDescription>
+            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Hello</CardTitle>
+            <CardDescription className="text-xs sm:text-sm text-gray-600">A little about me</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I’m Ümit Akdeniz. I'm a passionate coder and physics enthusiast, blending the worlds of software and science to explore new ideas and solve problems.</p>
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">Im umit Akdeniz Im a passionate coder and physics enthusiast blending the worlds of software and science to explore new ideas and solve problems</p>
           </CardContent>
         </Card>
 
