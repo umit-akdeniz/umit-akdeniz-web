@@ -26,7 +26,7 @@ export default function Home() {
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
           
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I’m learning physics and working on software.</p>
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I'm learning physics and working on software.</p>
           </CardContent>
         </Card>
 
