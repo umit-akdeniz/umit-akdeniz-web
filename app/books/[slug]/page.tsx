@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { Link } from 'lucide-react';
+import Link from 'next/link';
 
 interface Book {
   slug: string;
@@ -115,9 +115,9 @@ export default async function BookDetail({ params }: { params: Promise<{ slug: s
         <div className="mt-4 sm:mt-6 text-center">
           <Link
             href="/books"
-            className="text-blue-600 hover:underline text-sm sm:text-base md:text-lg"
+            className="text-blue-600  text-sm sm:text-base md:text-lg"
           >
-            Kitaplara Geri Dön
+            Return to Books
           </Link>
         </div>
       </div>
