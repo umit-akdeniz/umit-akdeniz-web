@@ -1,70 +1,40 @@
-'use client';
+import Link from 'next/link';
 
-import { useState } from 'react';
-import Image from 'next/image';
+interface Essay {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+}
 
 export default function Essays() {
-  const [selectedEssay, setSelectedEssay] = useState<string | null>(null);
-
-  const essays = [
+  const essays: Essay[] = [
     {
-      id: '1',
-      title: 'The Art of Simplicity',
-      date: 'March 15, 2025',
-      content: (
-        <div className="space-y-2 sm:space-y-4">
-          <p className="text-xs sm:text-sm md:text-base text-gray-700">
-            Simplicity is not just about removing clutter—it’s about finding clarity. In a world overflowing with noise, I’ve learned that less can indeed be more.
-          </p>
-          <Image
-            src="/1984.jpg"
-            alt="Simplicity Illustration"
-            width={300}
-            height={200}
-            className="w-full h-auto max-h-32 sm:max-h-48 md:max-h-64 object-cover rounded-md"
-          />
-        </div>
-      ),
+      slug: 'art-of-simplicity',
+      title: 'Art of Simplicity',
+      description: 'An exploration of clarity and minimalism in life and design.',
+      date: 'March 21, 2025',
     },
-    {
-      id: '2',
-      title: 'A Walk Through Time',
-      date: 'March 10, 2025',
-      content: (
-        <div className="space-y-2 sm:space-y-4">
-          <p className="text-xs sm:text-sm md:text-base text-gray-700">
-            Time moves forward, but our minds wander back. This is a short reflection on moments that shaped me—some loud, some quiet, all significant.
-          </p>
-          <iframe
-            className="w-full h-full sm:h-48 md:h-64 rounded-md"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Reflection Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-      ),
-    },
+    // Daha fazla essay ekleyebilirsin
+    
   ];
 
   return (
-    <div className="p-2 sm:p-4 md:p-6 max-w-full mx-auto">
-      <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">Essays</h1>
-      <div className="space-y-2 sm:space-y-4">
+    <div className="min-h-screen bg-gray-50 p-4 sm:p-6 md:p-8">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-8 sm:mb-12 text-center">
+        Essays
+      </h1>
+
+      {/* Essay Listesi */}
+      <div className="max-w-full sm:max-w-4xl mx-auto space-y-6 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
         {essays.map((essay) => (
-          <div
-            key={essay.id}
-            className="bg-white p-2 sm:p-3 md:p-4 rounded-lg shadow-md cursor-pointer hover:bg-gray-50 transition-colors duration-200"
-            onClick={() => setSelectedEssay(selectedEssay === essay.id ? null : essay.id)}
-          >
-            <div className="flex justify-between items-center">
-              <h2 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800">{essay.title}</h2>
-              <p className="text-xs sm:text-sm text-gray-600">{essay.date}</p>
+          <Link key={essay.slug} href={`/essays/${essay.slug}`} className="block">
+            <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h2 className="text-lg sm:text-xl font-semibold text-gray-800">{essay.title}</h2>
+              <p className="text-sm sm:text-base text-gray-600 mt-2">{essay.description}</p>
+              <p className="text-xs text-gray-500 mt-3">{essay.date}</p>
             </div>
-            {selectedEssay === essay.id && (
-              <div className="mt-2 sm:mt-3">{essay.content}</div>
-            )}
-          </div>
+          </Link>
         ))}
       </div>
     </div>

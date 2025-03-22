@@ -1,79 +1,102 @@
 export default function Journey() {
-  const journey = [
+  const timelineEvents = [
     {
-      date: '1995',
+      year: '2000',
       title: 'Born',
-      description: 'Came into the world with a curious mind.',
+      description: 'I was born, my journey began.',
     },
     {
-      date: '2010',
-      title: 'High School',
-      description: 'Started exploring tech and music.',
+      year: '2009',
+      title: 'Chess',
+      description: 'I discovered chess, sparking my curiosity.',
     },
     {
-      date: '2013',
-      title: 'University',
-      description: 'Enrolled in a CS program and fell in love with coding.',
+      year: '2013',
+      title: 'Istanbul',
+      description: 'I relocated to Istanbul, a big change in my life.',
     },
     {
-      date: '2017',
-      title: 'First Gig',
-      description: 'Landed my first freelance coding project.',
+      year: '2014',
+      title: 'Programming',
+      description: 'I met programming, opening a new world for me.',
     },
     {
-      date: '2020',
-      title: 'Full-Time Job',
-      description: 'Joined a tech company as a developer.',
+      year: '2018',
+      title: 'Graduation',
+      description: 'I graduated from high school, ready for the next step.',
     },
     {
-      date: '2023',
-      title: 'Side Hustle',
-      description: 'Launched my own app and started a blog.',
+      year: '2018',
+      title: 'Metallica',
+      description: 'I first listened to Metallica, opening a new window to my world.',
     },
     {
-      date: '2025',
-      title: 'This Site',
-      description: 'Built this sleek personal website.',
+      year: '2018',
+      title: 'Books',
+      description: 'I started ordering books, later owning 650, a new world for me.',
+    },
+    {
+      year: '2019',
+      title: 'Restaurant',
+      description: 'I worked at a restaurant, my first real job.',
+    },
+    {
+      year: '2019',
+      title: 'Art Films',
+      description: 'I moved from shallow cinema to art films, discovering my love for art.',
+    },
+    {
+      year: '2021',
+      title: 'Physics',
+      description: 'I started studying physics at Istanbul University.',
+    },
+    {
+      year: '2022',
+      title: 'Guitar',
+      description: 'I bought my first guitar, a step into music.',
+    },
+    {
+      year: '2024',
+      title: 'Physics & ML',
+      description: 'I began studying particle physics and machine learning.',
+    },
+    {
+      year: '2025',
+      title: 'Website',
+      description: 'I built and launched my own website, a proud milestone.',
     },
   ];
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 max-w-full sm:max-w-3xl mx-auto min-h-screen flex flex-col">
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-6 sm:mb-8 text-center">My Journey</h1>
+    <div className="min-h-screen bg-white p-4 sm:p-6 md:p-8">
+      <h1 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-8 sm:mb-12 text-center">
+        My Journey
+      </h1>
 
-      {/* Zaman Çizelgesi */}
-      <div className="relative flex-1">
+      {/* Timeline */}
+      <div className="relative max-w-full sm:max-w-3xl mx-auto md:ml-12">
         {/* Ana Çizgi */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-blue-600 h-full" aria-hidden="true"></div>
+        <div className="absolute left-2 sm:left-4 top-0 bottom-0 w-0.5 bg-black" />
 
         {/* Olaylar */}
-        <div className="space-y-8 sm:space-y-10">
-          {journey.map((event, index) => (
-            <div key={index} className="relative flex flex-col sm:flex-row items-center sm:items-start">
-              {/* Yıl (Sol) */}
-              <div className="sm:w-1/2 sm:pr-4 text-right">
-                <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700">{event.date}</p>
+        <div className="space-y-8">
+          {timelineEvents.map((event, index) => (
+            <div key={index} className="relative flex flex-col sm:flex-row items-start">
+              {/* Çizgi Noktası */}
+              <div className="absolute left-0 sm:left-2 z-10" />
+
+              {/* 1. Çıkıntı: Olay Başlığı */}
+              <div className="ml-6 sm:ml-8 w-full sm:w-32 flex-shrink-0">
+                <span className="text-sm text-gray-800">{event.title}</span>
+                <h2 className="text-base font-semibold text-gray-800 mt-1">{event.year}</h2>
               </div>
 
-              {/* Nokta */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-blue-600 z-10"></div>
-
-              {/* Olay Başlığı ve Açıklama (Sağ) */}
-              <div className="sm:w-1/2 sm:pl-4 mt-2 sm:mt-0 text-center sm:text-left">
-                <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800">{event.title}</h2>
-                <div className="relative mt-2">
-                  {/* Kıvrılmış Ok */}
-                  <svg
-                    className="absolute left-0 top-0 w-6 h-6 sm:w-8 sm:h-8 text-blue-600"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  >
-                    <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8" />
-                    <path d="M12 16l4-4-4-4" />
-                  </svg>
-                  <p className="pl-8 sm:pl-10 text-xs sm:text-sm md:text-base text-gray-600">{event.description}</p>
+              {/* 2. Çıkıntı: Açıklama */}
+              <div className="ml-6 sm:ml-12 mt-2 sm:mt-0 flex-1">
+                <div className="relative bg-white p-3 rounded-md border border-gray-200">
+                  {/* Yatay Bağlantı Çizgisi */}
+                  <div className="" />
+                  <p className="text-sm text-gray-800">{event.description}</p>
                 </div>
               </div>
             </div>

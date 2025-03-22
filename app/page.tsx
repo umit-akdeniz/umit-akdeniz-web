@@ -26,29 +26,45 @@ export default function Home() {
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
           
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">Im mit Akdeniz</p>
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I’m learning physics and working on software.</p>
           </CardContent>
         </Card>
 
         <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
-            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Featured Essay</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">Read my latest thoughts.</CardDescription>
+            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Passions and Pursuits</CardTitle>
+            <CardDescription className="text-xs sm:text-sm text-gray-600">My Personal Interests</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">
-              A sample essay. <a href="/essays/sample" className="text-blue-600 hover:underline">Read more</a>
-            </p>
+          #Chess
+
+#Guitar
+
+#LanguageLearning
+
+#SoftwareDevelopment
+
+#Books
+
+#Psychology
+
+#Economics
+
+#Physics
+
+#Mathematics
+
+#StrongPersonalities
           </CardContent>
         </Card>
 
         <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
-            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">My Playlist</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">Listen to my favorite tracks</CardDescription>
+            <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Feel Free to Reach Out!</CardTitle>
+            <CardDescription className="text-xs sm:text-sm text-gray-600">Don't hesitate to get in touch</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
-            
+          Email me at umitakdenizjob@gmail.com
           </CardContent>
         </Card>
       </div>
