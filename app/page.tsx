@@ -2,6 +2,19 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 export default function Home() {
+  const hashtags = [
+    '#Chess',
+    '#Guitar',
+    '#LanguageLearning',
+    '#SoftwareDevelopment',
+    '#Books',
+    '#Psychology',
+    '#Economics',
+    '#Physics',
+    '#Mathematics',
+    '#StrongPersonalities',
+  ];
+
   return (
     <div className="p-2 sm:p-4 md:p-6">
       {/* Banner */}
@@ -14,7 +27,9 @@ export default function Home() {
           className="w-full h-auto object-contain"
           priority
         />
-        <div className="absolute text-white text-lg sm:text-2xl md:text-3xl font-bold drop-shadow-lg">Welcome to My World</div>
+        <div className="absolute text-white text-lg sm:text-2xl md:text-3xl font-bold drop-shadow-lg">
+          Welcome to My World
+        </div>
       </div>
 
       {/* Kartlar */}
@@ -25,8 +40,9 @@ export default function Home() {
             <CardDescription className="text-xs sm:text-sm text-gray-600">A little about me.</CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
-          
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base">I'm learning physics and working on software.</p>
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">
+              I&apos;m learning physics and working on software.
+            </p>
           </CardContent>
         </Card>
 
@@ -35,36 +51,29 @@ export default function Home() {
             <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Passions and Pursuits</CardTitle>
             <CardDescription className="text-xs sm:text-sm text-gray-600">My Personal Interests</CardDescription>
           </CardHeader>
-          <CardContent className="p-2 sm:p-3 md:p-4">
-          #Chess
-
-#Guitar
-
-#LanguageLearning
-
-#SoftwareDevelopment
-
-#Books
-
-#Psychology
-
-#Economics
-
-#Physics
-
-#Mathematics
-
-#StrongPersonalities
+          <CardContent className="p-2 sm:p-3 md:p-4 flex flex-wrap gap-2">
+            {hashtags.map((tag, index) => (
+              <span
+                key={index}
+                className="inline-block bg-gray-100 text-gray-800 text-xs sm:text-sm font-medium px-2 py-1 rounded-full border border-gray-200"
+              >
+                {tag}
+              </span>
+            ))}
           </CardContent>
         </Card>
 
         <Card className="bg-white border-gray-200 shadow-md">
           <CardHeader className="p-2 sm:p-3 md:p-4">
             <CardTitle className="text-sm sm:text-base md:text-lg text-gray-800">Feel Free to Reach Out!</CardTitle>
-            <CardDescription className="text-xs sm:text-sm text-gray-600">Don't hesitate to get in touch</CardDescription>
+            <CardDescription className="text-xs sm:text-sm text-gray-600">
+              Don&apos;t hesitate to get in touch
+            </CardDescription>
           </CardHeader>
           <CardContent className="p-2 sm:p-3 md:p-4">
-          Email me at umitakdenizjob@gmail.com
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">
+              Email me at umitakdenizjob@gmail.com
+            </p>
           </CardContent>
         </Card>
       </div>
