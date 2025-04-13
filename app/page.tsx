@@ -66,11 +66,8 @@ export default function Home() {
     { name: 'Languages', icon: '🌍' },
     { name: 'Coding', icon: '💻' },
     { name: 'Books', icon: '📚' },
-    { name: 'Psychology', icon: '🧠' },
-    { name: 'Economics', icon: '📈' },
     { name: 'Physics', icon: '⚛️' },
     { name: 'Math', icon: '➗' },
-    { name: 'Personalities', icon: '💪' },
   ];
 
   const socialLinks = {
