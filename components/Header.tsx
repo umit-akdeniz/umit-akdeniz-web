@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -14,6 +14,7 @@ export default function Header() {
     { href: '/essays', label: 'Essays' },
     { href: '/books', label: 'Books' },
     { href: '/links', label: 'Links' },
+    { href: '/diary', label: 'Diary' },
     
   ];
 
@@ -52,11 +53,20 @@ export default function Header() {
       </nav>
 
       {/* Masaüstü Menü */}
-      <nav className="hidden md:block w-64 bg-white border-r border-gray-200 fixed top-0 left-0 h-full z-40 flex items-center justify-center">
+      <nav className="hidden md:block w-64 bg-white border-r border-gray-200 fixed top-0 left-0 h-full z-40 flex items-center items-justify-center">
+        <Image
+                src="/p.png" // Profil fotoğrafın buraya gelecek
+                alt="Profile Photo"
+                width={100}
+                height={100}
+                className="w-full h-auto object-contain"
+              />
         <div className="p-4 w-full max-w-xs">
+          
+        
           <h2 className="text-lg font-semibold text-gray-800 mb-2 text-center">Ümit Akdeniz</h2>
           <p className="text-sm text-gray-600 mb-6 text-center">A curious mind exploring life.</p>
-          <ul className="space-y-4">
+          <ul className="space-y-4 text-center">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
