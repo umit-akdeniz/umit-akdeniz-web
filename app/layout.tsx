@@ -12,7 +12,7 @@ const metadata = {
   title: 'Ümit Akdeniz',
   description: 'Personal website of Ümit Akdeniz.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '../src/app/favicon.ico',
   },
 };
 

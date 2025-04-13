@@ -5,31 +5,32 @@ interface TweetEntry {
   date: string;
 }
 
-export default function Tweets() {
+export default function MinimalTweets() {
   const tweets: TweetEntry[] = [
     { id: '1911214935415070815', date: '' },
+
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 sm:p-6 md:p-8">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-8 sm:mb-12 text-center">
+    <div className="min-h-screen bg-gray-50 p-4">
+      <h1 className="text-2xl font-medium text-gray-800 mb-6 text-center">
         Tweets
       </h1>
 
-      {/* Tweet Listesi */}
-      <div className="max-w-full sm:max-w-3xl mx-auto space-y-6">
+      {/* Tweet Grid - PC için yan yana, mobil için alt alta */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
         {tweets.map((tweet, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="bg-white rounded shadow-sm hover:shadow transition-shadow duration-200"
           >
-            <div className="p-4 sm:p-6">
-              {/* Tarih */}
-              <div className="mb-2">
-                <span className="text-sm sm:text-base font-semibold text-gray-800">{tweet.date}</span>
-              </div>
+            {/* Tarih - Minimal başlık */}
+            <div className="p-2 border-b text-xs text-gray-500">
+              {tweet.date}
+            </div>
 
-              {/* Tweet */}
+            {/* Tweet - İçerik bölümü */}
+            <div className="p-3">
               <div className="react-tweet-theme">
                 <Tweet id={tweet.id} />
               </div>
