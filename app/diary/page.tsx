@@ -14,17 +14,13 @@ interface DiaryEntry {
 export default function Diary() {
   const entries: DiaryEntry[] = [
     {
-      date: 'April 1',
+      date: 'April 13',
       content: [
-        'Today I felt inspired by the sunrise.',
-        'A new beginning.',
-        'The sky was a mix of orange and pink.',
+        'I added a diary section to my page.',
+        'From now on, Ill try to write here daily.',
       ],
     },
-    {
-      date: 'April 2',
-      content: ['Walked through the park today.', 'The flowers were blooming.'],
-    },
+    
   ];
 
   return (
