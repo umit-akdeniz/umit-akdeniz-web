@@ -27,7 +27,7 @@ function MobileMenu({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () =>
           className="bg-gray-800 text-white rounded-full p-2 shadow-md"
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </div>
 
