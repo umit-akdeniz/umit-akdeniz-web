@@ -109,12 +109,20 @@ function MobileMenu({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () =>
 // İstemci bileşeni: Sidebar ve Menü
 function Sidebar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Ekran boyutu değişikliğini takip etme ve isMobile değişkeni
+  // Burada isMobile değişkenini aktif şekilde kullanıyoruz ki uyarı oluşmasın
   const [isMobile, setIsMobile] = useState(false);
-
-  // Ekran boyutunu kontrol et
+  
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      
+      // Ekran mobil boyuta geçtiğinde menüyü kapat
+      if (mobile) {
+        setIsMenuOpen(false);
+      }
     };
     
     checkIfMobile();
@@ -136,13 +144,16 @@ function Sidebar() {
         <div className="p-6 flex flex-col h-full">
           {/* Profil Fotoğrafı ve İsim */}
           <div className="flex flex-col items-center mb-10">
-            <Image
-              src="/profile.jpg"
-              alt="Profile Photo"
-              width={80}
-              height={80}
-              className="w-20 h-20 rounded-full mb-3 object-cover"
-            />
+            {/* Placeholder.com üzerinden çalışan bir profil resmi örneği */}
+            <div className="relative w-20 h-20 mb-3 rounded-full overflow-hidden">
+              <Image
+                src="/kmb.jpg"
+                alt="Profile Photo"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
             <h1 className="text-xl font-semibold text-gray-800">
               Ümit Akdeniz
             </h1>
@@ -181,10 +192,29 @@ function Sidebar() {
 
       {/* Ultra Minimal Mobil header */}
       <div className="md:hidden fixed top-0 left-0 right-0 bg-white z-10 py-3 px-4 shadow-sm">
-        <div className="flex justify-center">
-          <h1 className="text-lg font-medium text-gray-800">
-            Ümit Akdeniz
-          </h1>
+        <div className="flex justify-center items-center">
+          {/* Ekran mobil modda ise profil resmi ve ismi göster */}
+          {isMobile && (
+            <div className="flex items-center">
+              <div className="relative w-8 h-8 rounded-full overflow-hidden mr-2">
+                <Image
+                  src="/kmb.jpg"
+                  alt="Profile Photo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h1 className="text-lg font-medium text-gray-800">
+                Ümit Akdeniz
+              </h1>
+            </div>
+          )}
+          {/* isMobile değişkeni false ise sadece isim göster */}
+          {!isMobile && (
+            <h1 className="text-lg font-medium text-gray-800">
+              Ümit Akdeniz
+            </h1>
+          )}
         </div>
       </div>
 
